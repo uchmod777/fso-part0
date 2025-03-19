@@ -1,0 +1,12 @@
+0.5 - SPA new note diagram:
+
+```mermaid
+sequenceDiagram
+    participant browser
+    participant server
+
+    browser->>server: (Request) HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa : JSON
+    activate server
+    server-->>browser: (Response via AJAX) HTTP 201 Created : JSON
+    deactivate server
+```
